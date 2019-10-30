@@ -12,7 +12,7 @@ class HomeController extends Controller
     	$this->middleware('auth',['except'=>'getLogout']);
     }
    public function getIndex() {
-      $class = StudentClass::where('status',1); 
+      $class = StudentClass::where('status',1)->g; 
       return view('home', ['class' => $class]);
       //return view('home');
     }
