@@ -40,10 +40,13 @@
 				</tr>
 			</thead>
 			<tbody>
+				@foreach($class as $value)
 				<tr>
-					<td></td>
-					<td>{{$class->course_id}}</td>
+					<td>{{$value->id}}</td>
+					<td>{{$value->course_id}}</td>
+					<td>{{$value->}}</td>
 				</tr>
+				@endforeach
 			</tbody>
 		</table>
 	</div>
